@@ -3,10 +3,10 @@
 
 def solution(price):
     if price >= 500000:
-        return price * 0.8
+        return int(price * 0.8)
     elif 300000 <= price < 500000 :
-        return price * 0.9
+        return int(price * 0.9)
     elif 100000 <= price < 300000:
-        return price * 0.95
+        return int(zprice * 0.95)
     else:
-        return price
+        return int(price)
