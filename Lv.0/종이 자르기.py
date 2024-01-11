@@ -3,3 +3,6 @@ def solution(M, N):
     if M and N == 1:
         answer = 0
     return answer
+
+def solution(M,N):
+    return (M * N)-1
