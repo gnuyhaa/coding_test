@@ -1,5 +1,6 @@
 def solution(babbling):
     answer = 0
+    
     can = ['aya', 'ye', 'woo', 'ma']
     
     for bab in babbling:  
