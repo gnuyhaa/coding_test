@@ -1,0 +1,11 @@
+SELECT
+  YEAR(DIFFERENTIATION_DATE) YEAR,
+  (MAX(SIZE_OF_COLONY) OVER (PARTITION BY YEAR(DIFFERENTIATION_DATE))
+     - SIZE_OF_COLONY) YEAR_DEV,
+  ID
+FROM ECOLI_DATA
+ORDER BY YEAR, YEAR_DEV;
+
+# YEAR_DEV = 분화된 연도별 가장 큰 대장균 크기 - 각 대장균의 크기 
+# 연도에 대해 오름차순 
+# 같은 연도는 대장균 크기 편차에 대해 오름차순
